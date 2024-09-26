@@ -1,0 +1,97 @@
+:root {
+  --accent: #408d4f;
+  --second: #fff;
+}
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+#app div {
+  width: 350px;
+  max-width: 90vw;
+}
+
+header {
+  display: flex;
+  width: 100vw;
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: var(--transparent-background);
+}
+
+.logo:hover {
+  filter: contrast(0.85);
+}
+
+.logo img {
+  object-fit: cover;
+  width: 40px;
+  height: 20px;
+}
+
+textarea,
+input[type="text"] {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid var(--third);
+}
+
+textarea:focus,
+input[type="text"]:focus {
+  border-color: var(--second);
+}
+
+button:hover {
+  filter: brightness(.9);
+}
+
+.drop-zone {
+  border: 2px dashed var(--accent);
+  padding: 20px;
+  cursor: var(--link-cursor);
+}
+
+.drop-zone p {
+  color: var(--accent);
+  cursor: var(--link-cursor);
+}
+
+.buttonDarkMode {
+  margin: 20px;
+  color: var(--second);
+  font-size: 25px;
+  border: 2px solid var(--second);
+  padding: 5px;
+  border-radius: 25%;
+}
+
+.buttonDarkMode:hover {
+  filter: contrast(0.5);
+  /* border-color: var(--second); */
+}
+
+@media screen and (max-width: 300px) {
+  .buttonDarkMode {
+    display: none;
+  }
+
+  #app {
+    margin-top: 20px;
+  }
+}
